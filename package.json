@@ -1,6 +1,6 @@
 {
   "name": "@zjlab-fe/fe-assets",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,7 +9,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+http://gitee.zhejianglab.com:80/enterprise/fe-assets.git"
+    "url": "git+https://github.com/shelwinjue/fe-assets.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
