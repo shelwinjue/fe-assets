@@ -1,0 +1,38 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": {
+    "pageNum": 96726,
+    "pageSize": 69005,
+    "list": [
+      {
+        "dataType": 48578,
+        "title": "z2LuhpecLl",
+        "events": ["\"7KWoBZ77TB\""],
+        "clickNumber": 58299,
+        "time": ["\"iuWQ5lEGRX\""],
+        "locations": ["\"Otv1Qk8YJ3\""],
+        "points": ["\"k2cX6TqaNA\""]
+      },
+      {
+        "dataType": 67747,
+        "title": "6CiIfjBa5o",
+        "events": ["\"SuXRWw9dIP\""],
+        "clickNumber": 11457,
+        "time": ["\"zVDwFICM8D\""],
+        "locations": ["\"8t6DqrPhl0\""],
+        "points": ["\"XQ0Z802nPR\""]
+      },
+      {
+        "dataType": 95823,
+        "title": "qQLBJC3LQr",
+        "events": ["\"A9saSxGUPn\""],
+        "clickNumber": 30656,
+        "time": ["\"JdPQwGUMq8\""],
+        "locations": ["\"8wTi1GisBH\""],
+        "points": ["\"A7Tt8Ff8oW\""]
+      }
+    ],
+    "size": 39292
+  }
+}

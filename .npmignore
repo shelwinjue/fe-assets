@@ -1,0 +1,17 @@
+.vscode
+src/
+!dist/
+.husky
+__mocks__/
+docs/
+public/
+.babelrc
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+pnpm-lock.yaml
+webpack.dev.config.js
+webpack.prod.config.js
+tsconfig.json
+node_modules/
