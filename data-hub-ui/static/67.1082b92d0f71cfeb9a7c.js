@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_zjlab_fe_data_hub_ui=self.webpackChunk_zjlab_fe_data_hub_ui||[]).push([[67],{2067:(e,t,a)=>{a.r(t),a.d(t,{default:()=>n});const n="import { jsx as _jsx } from \"react/jsx-runtime\";\nimport Header from '@/components/header';\nexport default function Demo() {\n    return _jsx(Header, { showLogin: true });\n}\n"}}]);
