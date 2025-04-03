@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_zjlab_fe_data_hub_ui=self.webpackChunk_zjlab_fe_data_hub_ui||[]).push([[598],{8598:(e,a,u)=>{u.r(a),u.d(a,{default:()=>_});var l=u(86070),t=u(30758),n=u(67614);function _(){const[e,a]=(0,t.useState)(["abc","def"]);return(0,l.jsx)(n.A,{valueType:"array",value:e,onChange:e=>{console.log("+++ value",e),a(e)},maxLength:20,placeholder:"标签"})}}}]);
