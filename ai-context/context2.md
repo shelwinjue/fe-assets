@@ -2,17 +2,18 @@
 
 # 生成代码要求
 
-1. 请正确匹配antd组件，例如：Flex(布局)，Tabs、Table、Input、Search、Icon、Tag、Button、Select、Modal
-2. 涉及到图表的UI，请正确匹配@ant-design/plots的饼图(Pie)、折线图(Line)、柱状图(Column)
-3. 技术栈要求：
+1. 严格按照截图，像素级还原U
+2. 请正确匹配antd组件，例如：Flex(布局)，Tabs、Table、Input、Search、Icon、Tag、Button、Select、Modal
+3. 涉及到图表的UI，请正确匹配@ant-design/plots的饼图(Pie)、折线图(Line)、柱状图(Column)
+4. 技术栈要求：
 - 框架：React（Hooks模式）
 - 组件库：antd、@ant-design/plots
 - 语言：TypeScript
 - 样式方案：CSS Modules
-4. 如果截图中有蓝色虚线框，那么蓝色虚线框里面的UI才需要转换成代码，其中第一个蓝色虚线框里的是主UI，其他蓝色虚线框里的是弹框UI，其中箭头表示交互逻辑，表示点击出现
-5. 代码中引入scss，应使用import * as styles
-6. 增加路由配置时，应该与{"path": "/"}保持同级，不应该添加到其他路由配置项的children中
-7. 预览执行npm run start
+5. 如果截图中有蓝色虚线框，那么蓝色虚线框里面的UI才需要转换成代码，其中第一个蓝色虚线框里的是主UI，其他蓝色虚线框里的是弹框UI，其中箭头表示交互逻辑，表示点击出现
+6. 代码中引入scss，应使用import * as styles
+7. 增加路由配置时，应该与{"path": "/"}保持同级，不应该添加到其他路由配置项的children中
+8. 预览执行npm run start
 
 # 代码示例
 
