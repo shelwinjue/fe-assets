@@ -2,7 +2,7 @@
 
 # 生成代码要求
 
-1. 严格按照截图，像素级还原U
+1. 严格按照截图，像素级还原UI
 2. 请正确匹配antd组件，例如：Flex(布局)，Tabs、Table、Input、Search、Icon、Tag、Button、Select、Modal
 3. 涉及到图表的UI，请正确匹配@ant-design/plots的饼图(Pie)、折线图(Line)、柱状图(Column)
 4. 技术栈要求：
