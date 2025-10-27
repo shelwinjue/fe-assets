@@ -22,6 +22,17 @@
 2. 在生成代码时，引入antd库，使用Table组件
 3. 图中的搜索框和下拉框与表格数据相关，需要在表格数据状态中添加相关变量，并将其与Search和Select组件的value绑定在一起，onChange时更新改状态
 
+# 复制组件示例
+
+## 复制组件示例1
+
+![复制组件示例](https://shelwinjue.github.io/fe-assets/images/copy-1.png)
+
+说明:
+1. 这是一个简单的复制组件示例，展示了如何在页面中添加一个复制按钮，点击按钮后将相邻的文本复制到剪贴板
+2. 在生成代码时，引入@zjlab-fe/data-hub-ui库，使用Copy组件，text参数，默认传入与它相邻的文本
+
+
 # 代码示例
 
 ## Tabs组件说明
