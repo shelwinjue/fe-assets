@@ -22,9 +22,10 @@
       // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
       // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
       // Otherwise, leave pathSegmentsToKeep as 0.
-      var pathSegmentsToKeep = 2;
+      var pathSegmentsToKeep =
+        window.location.hostname.indexOf('github.io') !== -1 ? 2 : 1;
       var l = window.location;
-      if (l.pathname.indexOf('/fe-assets/data-hub-ui/') !== -1) {
+      if (l.pathname.indexOf('/data-hub-ui/') !== -1) {
         l.replace(
           l.protocol +
             '//' +

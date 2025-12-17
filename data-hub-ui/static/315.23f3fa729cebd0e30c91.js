@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_zjlab_fe_data_hub_ui=self.webpackChunk_zjlab_fe_data_hub_ui||[]).push([[315],{315:(a,e,u)=>{u.d(e,{default:()=>_});const _=".test-drag-area {\r\n  background-color: #fff;\r\n}\r\n"}}]);
