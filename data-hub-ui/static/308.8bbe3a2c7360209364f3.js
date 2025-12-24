@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_zjlab_fe_data_hub_ui=self.webpackChunk_zjlab_fe_data_hub_ui||[]).push([[308],{87308:(e,n,t)=>{t.d(n,{default:()=>r});const r=".text-red {\r\n  color: oklch(0.6 0.1 270);\r\n  justify-self: center;\r\n  font-size: 48px;\r\n  line-height: 1.5;\r\n}\r\n"}}]);
