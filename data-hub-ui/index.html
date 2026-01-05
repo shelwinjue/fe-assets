@@ -9,6 +9,11 @@
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
       (function(l) {
+        
+        if (window.location.pathname.indexOf('/index.html') !== -1) {
+          window._useHashRouter = true;
+          return;
+        }
         if (l.search[1] === '/' ) {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
@@ -17,4 +22,4 @@
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))</script></head><body><div id="root"></div><script defer="defer" src="/data-hub-ui/static/main.a657ec2c4a50503bb8de.js"></script></body></html>
+      }(window.location))</script></head><body><div id="root"></div><script defer="defer" src="/data-hub-ui/static/main.dae8ef0c254d630db2ce.js"></script></body></html>
