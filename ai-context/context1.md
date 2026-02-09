@@ -75,3 +75,83 @@ const [tableDataParams, setTableDataParams] = useState<{
 ```
 
 如果截图中发现与table相近的有下拉框 ，需要在tableDataParams中添加相关的变量，变量名可以根据下拉框的功能命名，例如：status、type、language、subject等,并将该变量与Select组件的value绑定在一起，onChange时更新改状态
+
+### 包含排序、筛选的Table组件示例
+
+如果某一列设定为可排序，那么在定义的时候给这一列加上属性sorter等于true;如果某一列设定为可筛选，那么在定义的时候给这一列加上filters属性，filters属性值是一个列表，列表的每一项包含text和value两个属性，如果这一列的筛选值是多选，那么再给这一列加上filterMultiple等于true;给Table加上onChange回调处理函数，该函数类型是TableProps['onChange']，onChange回调函数的代码逻辑参照下面的代码
+
+```tsx
+import { useState } from 'react';
+import { Table } from 'antd';
+import type { TableProps } from 'antd';
+export function Demo() {
+  const [queryParams, setQueryParams] = useState<{
+    pageNum: number;
+    pageSize: number;
+    sortBy?: string;
+    sortOrder?: 'asc' | 'desc';
+  }>({
+    pageNum: 1,
+    pageSize: 20,
+  });
+
+  const columns: TableProps<T>['columns'] = [
+    {
+      title: '姓名',
+      dataIndex: 'name',
+      key: 'name',
+      filters: [
+        {
+          text: '张三',
+          value: '张三',
+        },
+        {
+          text: '李四',
+          value: '李四',
+        },
+      ],
+      filterMultiple: true
+    },
+    {
+      title: '年龄',
+      dataIndex: 'age',
+      key: 'age',
+      sorter: true,
+    },
+  ];
+
+   const onTableChange: TableProps<T>['onChange'] = (
+    pagination,
+    filters,
+    sorter,
+    extra,
+  ) => {
+    const { action } = extra;
+    if (action === 'sort' && !Array.isArray(sorter)) {
+      let newQueryParams = {
+        ...queryParams,
+        pageNum: 1,
+        sortBy: sorter.columnKey,
+        sortOrder: sorter.columnKey ? (sorter.order === 'ascend' ? 'asc' : 'desc') : undefined,
+      };
+      setQueryParams(newQueryParams);
+    } else if (action === 'filter') {
+      setQueryParams({
+        ...queryParams,
+        pageNum: 1,
+        parseStatus: filters?.parseStatus?.[0],
+      });
+    }
+  };
+
+  return (
+    <Table
+      columns={columns}
+      onChange={onChange}
+    />
+  );
+
+}
+
+```
+
