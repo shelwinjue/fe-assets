@@ -50,25 +50,25 @@
 
 ```tsx
 const [tableDataParams, setTableDataParams] = useState<{
-  pageIndex: number;
+  pageNum: number;
   pageSize: number;
 }>({
-  pageIndex: 1,
+  pageNum: 1,
   pageSize: 10,
 });
 ```
 
-其中将pageIndex、pageSize与Table组件的pagination属性绑定在一起，onChange时更新改状态
+其中将pageNum、pageSize与Table组件的pagination属性绑定在一起，onChange时更新改状态
 
 如果截图中发现与table相近的有搜索框，需要在tableDataParams中添加searchText，类型是string，默认值是'',并将searchText与Search组件的value绑定在一起，onChange时更新改状态
 
 ```tsx
 const [tableDataParams, setTableDataParams] = useState<{
-  pageIndex: number;
+  pageNum: number;
   pageSize: number;
   searchText: string;
 }>({
-  pageIndex: 1,
+  pageNum: 1,
   pageSize: 10,
   searchText: '',
 });
@@ -148,6 +148,54 @@ export function Demo() {
     <Table
       columns={columns}
       onChange={onChange}
+    />
+  );
+
+}
+
+```
+
+### 某列表示状态的Table组件示例
+
+```tsx
+
+import { Table, Tag } from 'antd';
+import type { TableProps } from 'antd';
+import {
+  CheckCircleOutlined,
+  ClockCircleOutlined,
+  CloseCircleOutlined,
+  ExclamationCircleOutlined,
+  SyncOutlined,
+} from '@ant-design/icons';
+
+export function Demo() {
+  const [queryParams, setQueryParams] = useState<{
+    pageNum: number;
+    pageSize: number;
+  }>({
+    pageNum: 1,
+    pageSize: 20,
+  });
+
+  const columns: TableProps<T>['columns'] = [
+    {
+      title: '状态',
+      dataIndex: 'status',
+      key: 'status',
+      render: (status) => {
+        return <Tag key={status} color={status} icon={icon} variant="filled">
+          {status}
+        </Tag>
+      }
+    }
+  ];
+
+   
+
+  return (
+    <Table
+      columns={columns}
     />
   );
 

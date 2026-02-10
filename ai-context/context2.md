@@ -33,25 +33,25 @@
 
 ```tsx
 const [tableDataParams, setTableDataParams] = useState<{
-  pageIndex: number;
+  pageNum: number;
   pageSize: number;
 }>({
-  pageIndex: 1,
+  pageNum: 1,
   pageSize: 10,
 });
 ```
 
-其中将pageIndex、pageSize与Table组件的pagination属性绑定在一起，onChange时更新改状态
+其中将pageNum、pageSize与Table组件的pagination属性绑定在一起，onChange时更新改状态
 
 如果截图中发现与table相近的有搜索框，需要在tableDataParams中添加searchText，类型是string，默认值是'',并将searchText与Search组件的value绑定在一起，onChange时更新改状态
 
 ```tsx
 const [tableDataParams, setTableDataParams] = useState<{
-  pageIndex: number;
+  pageNum: number;
   pageSize: number;
   searchText: string;
 }>({
-  pageIndex: 1,
+  pageNum: 1,
   pageSize: 10,
   searchText: '',
 });
